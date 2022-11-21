@@ -1,0 +1,24 @@
+Topic Learned 
+**********************
+
+CSS Background-
+CSS background property is used to define the background effects on element. 
+There are 5 CSS background properties that affects the HTML elements:
+
+background-color
+background-image
+background-repeat
+background-attachment
+background-position
+
+
+CSS Border
+The CSS border is a shorthand property used to set the border on an element.
+
+The CSS border properties are use to specify the style, color and size of the border of an element.
+The CSS border properties are given below
+
+border-style
+border-color
+border-width
+border-radius
