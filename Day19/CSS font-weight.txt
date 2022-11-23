@@ -1,0 +1,98 @@
+CSS font-weight---
+*************************
+This property is used for setting the thickness and boldness of the font. It is used to define the weight of the text.
+ The available weight depends on the font-family, which is used by the browser.
+
+Syntax
+
+font-weight: normal | lighter | bolder | bold | number | inherit |initial | unset;  
+Property Values
+
+normal: It is the default font-weight whose numeric value is 400.
+
+lighter: It considers the existing font-weight of the font-family and makes the font-weight lighter compare to the parent element.
+
+bolder: It considers the existing font-weight of the font-family and makes the font-weight heavier compare to the parent element.
+
+bold: As its name implies, it is used to define the bold font-weight, and its numeric value is 700.
+
+number: It is used to set the font-weight based on the specified number. Its range can be between 1 to 1000.
+
+initial: It is used to set the font-weight to its default value.
+
+
+Example
+
+<!DOCTYPE html>   
+    
+<html>   
+<head>   
+    <title> font-weight property </title>   
+    
+      
+    <style>   
+        body{   
+            font-family: sans-serif;   
+        }   
+        p.one{   
+            font-weight: normal;   
+        }   
+        p.two{   
+            font-weight: lighter;   
+        }   
+              
+        p.three{   
+            font-weight: bolder;   
+        }   
+        
+        p.four{   
+            font-weight: bold;   
+        }   
+        
+        p.five{   
+            font-weight: 1000;   
+        }   
+        
+        p.six{   
+            font-weight: initial;   
+        }   
+        p.seven{   
+            font-weight: inherit;   
+        }   
+        p.eight{   
+            font-weight: unset;   
+        }   
+        
+    </style>   
+</head>   
+    
+<body>   
+    <p class="one">   
+       normal property value  
+    </p>   
+    
+    <p class="two">   
+      lighter property value  
+    </p>   
+    
+    <p class="three">   
+      bolder property value  
+    </p>   
+    <p class="four">   
+      bold property value  
+   </p>   
+   <p class="five">   
+      number property value  
+   </p>   
+  
+    <p class="six">   
+      initial property value  
+    </p>   
+    <p class="seven">   
+      inherit property value  
+    </p>   
+    <p class="eight">   
+      unset property value  
+    </p>   
+</body>   
+</html> 
