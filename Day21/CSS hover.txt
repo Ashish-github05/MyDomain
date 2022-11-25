@@ -1,0 +1,130 @@
+CSS hover
+The :hover selector is for selecting the elements when we move the mouse on them. It is not only limited to the links. We can use it on almost every HTML element. To style the link to unvisited pages, we can use the :link selector. To style the link for visited pages, we can use the :visited selector and to style the active links we can use the :active selector.
+
+It is introduced in CSS1. The hover can be used to highlight the web pages as per the preference of users in an effective web-designing program.
+
+The hover feature includes the following effects:
+
+Change the color of the background and font.
+Modify the opacity of the image.
+Text embedding.
+Create image rollover effects.
+Swapping of images.
+NOTE: To make the hover effective, we must have to declare it after the :link and :visited selectors if they are present in the CSS definition.
+Basically, the hover effect modifies the element's property value to enable the animate changes on a stated image/text or the corresponding elements. Embedding of the hover elements in the web pages makes them interactive and functional.
+
+Generally, the hover feature is compatible with all of the main browsers. But, it will be a challenging task to implement it on touch devices. It is observed that an active hover function gets stuck on the non-supportive device.
+
+Syntax
+:hover {  
+  css declarations;  
+}  
+Let's understand it by using some illustrations.
+
+Example 1: Changing the link color on hover by using CSS
+
+Let's see how the color of the link gets changed when we place the cursor on it. It will create a stylish effect, and its implementation is easy when we are using CSS.
+
+<html>  
+<head>  
+  
+   <style>  
+      body{  
+         text-align:center;  
+      }  
+      a  
+      {  
+          color: red;  
+      }  
+      a:hover   
+      {   
+         color: green;   
+      }              
+      a:active  
+      {  
+      color: cyan;  
+      }  
+   </style>  
+ </head>  
+ <body>  
+    <h1>Move your mouse on the below link to see the hover effect.</h1>  
+    <a class = "link" href = https://www.javatpoint.com/css-grid>CSS Grid</a>  
+ </body>  
+</html>  
+Test it Now
+Example 2: Apply hover on paragraph, heading and link
+
+<html>  
+<head>  
+<style>  
+   body{  
+      text-align:center;  
+   }  
+p:hover, h1:hover, a:hover{  
+background-color: yellow;  
+}  
+</style>  
+</head>  
+<body>  
+<h1>Hello World</h1>  
+<p>Welcome to the javaTpoint.</p>  
+<a href='https://www.javatpoint.com/css-grid'>CSS Grid</a>  
+</body>  
+</html>  
+Test it Now
+Example 3- Text overlay on image hover
+
+This CSS code displays the text on the image during mouse hover. Let's see the image overlay effect during mouse hover.
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<style>  
+   body{  
+      text-align:center;  
+   }  
+* {box-sizing: border-box;}  
+  
+.container {  
+  position: relative;  
+  width: 50%;  
+  max-width: 300px;  
+}  
+  
+.image {  
+  display: block;  
+  width: 100%;  
+  height: auto;  
+}  
+  
+.overlay {  
+  position: absolute;   
+  bottom: 0;   
+  background: rgba(0, 0, 0, 0.2);   
+  width: 100%;  
+  opacity:0;   
+  transition: .9s ease;  
+  font-size: 25px;  
+  padding: 20px;  
+}  
+  
+.container:hover .overlay {  
+  opacity: 1.5;  
+}  
+</style>  
+</head>  
+<body>  
+  
+<h1>Image Overlay Title Effect</h1>  
+<h2>Move your mouse over the image to see the effect.</h2>  
+  
+<center>  
+<div class="container">  
+      <img src="jtp.png" class="image">  
+      <div class="overlay">Welcome to javaTpoint.com</div>  
+</div> </center>  
+  
+  
+</body>  
+</html>  
