@@ -1,0 +1,109 @@
+CSS Outline--
+
+CSS outline is just like CSS border property. It facilitates you to draw an extra border around an element to get visual attention.
+
+It is as easy as to apply as a border.
+
+See this example:
+
+<!DOCTYPE html>  
+<html>  
+<style type="text/css">  
+.box {  
+        background-color: #eee;  
+        outline: 3px solid red;  
+        border: 3px solid lightgreen;  
+        padding: 5px 10px;  
+}  
+</style>  
+<div class="box">Welcome to JavaTpoint</div>  
+</body>  
+</html>  
+Test it Now
+Difference between Border and Outline
+At first glance, border and outline look similar, but there are some very important differences between them:
+
+It is not possible to apply a different outline width, style and color for the four sides of an element while in border; 
+you can apply the provided value for all four sides of an element.
+The border is a part of element's dimension while the outline is not the part of element's dimension. 
+Means, it doesn't matter how thick an outline you apply to the element, the dimensions of it won't change.
+The outline property is a shorthand property. It can be divided into outline-width, outline-style and outline-color properties. 
+It facilitates you to use any of the property alone, if you need it.
+
+See this example:
+
+<!DOCTYPE html>  
+<html>  
+<style type="text/css">  
+.box {  
+        background-color: #eee;  
+        border: 3px solid Lightgreen;  
+        padding: 5px 10px;  
+        outline-width: 3px;  
+        outline-style: solid;  
+        outline-color: red;  
+}  
+</style>  
+<div class="box">Welcome to JavaTpoint</div>  
+</body>  
+</html>  
+Test it Now
+In the above example, you can see the three outline properties:
+
+Outline-width:It is similar to margin and padding. It can be either an absolute value or a relative value or one of the predefined outline width values i.e. thin, medium or thick. It is preferred to use either an absolute value or a relative value because different browsers interpret differently while using predefined outline width values like thin, medium or thick.
+
+Outline-color:It specifies the color that you use for the outline. It supports all the colors available in HTML and CSS.
+
+Outline-style:In the above example, we have used only solid outline style while there are a lot of outline style i.e. hidden, dotted, dashed, solid, double, groove, ridge, inset and outset.
+
+Let's take an example to demonstrate the usage of different outline-styles.
+
+See this example:
+
+<!DOCTYPE html>  
+<html>  
+<style type="text/css">  
+.box {  
+        outline-color: red;  
+        outline-width: 4px;  
+        margin: 10px;  
+        float: left;  
+        border: 2px solid lightgreen;  
+        padding: 5px 10px;  
+}  
+</style>  
+<div class="box" style="outline-style: dashed;">This is dashed outline.</div>  
+<div class="box" style="outline-style: dotted;">This is dotted outline.</div>  
+<div class="box" style="outline-style: double;">This is double outline.</div>  
+<div class="box" style="outline-style: groove;">This is groove outline.</div>  
+<div class="box" style="outline-style: inset;">This is inset outline.</div>  
+<div class="box" style="outline-style: outset;">This is outset outline.</div>  
+<div class="box" style="outline-style: ridge;">This is ridge outline.</div>  
+<div class="box" style="outline-style: solid;">This is solid outline.</div>  
+</body>  
+</html>  
+Test it Now
+Outline offset
+The outline offset is used to create a distance between outline and border.
+
+It takes a CSS length unit and the empty space between the border and the outline will be transparent and then it takes the background color of the parent element.
+So you can see a visible difference between outline and border.
+
+Let's take an example to see the difference between outline and border.
+
+See this example:
+
+<!DOCTYPE html>  
+<html>  
+<style type="text/css">  
+.box {  
+        background-color: #eee;  
+        outline: 3px solid red;  
+        outline-offset: 6px;  
+        border: 3px solid Lightgreen;  
+        padding: 5px 10px;  
+}  
+</style>  
+<div class="box">Welcome to JavaTpoint</div>  
+</body>  
+</html> 
