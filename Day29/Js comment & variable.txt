@@ -1,0 +1,112 @@
+JavaScript Comment-----
+
+JavaScript comments
+Advantage of javaScript comments
+Single-line and Multi-line comments
+The JavaScript comments are meaningful way to deliver message. It is used to add information about the code, warnings or suggestions so that end user can easily interpret the code.
+
+The JavaScript comment is ignored by the JavaScript engine i.e. embedded in the browser.
+
+Advantages of JavaScript comments
+There are mainly two advantages of JavaScript comments.
+
+To make code easy to understand It can be used to elaborate the code so that end user can easily understand the code.
+To avoid the unnecessary code It can also be used to avoid the code being executed. Sometimes, we add the code to perform some action. 
+But after sometime, there may be need to disable the code. In such case, it is better to use comments.
+Types of JavaScript Comments
+There are two types of comments in JavaScript.
+
+Single-line Comment
+Multi-line Comment
+JavaScript Single line Comment
+It is represented by double forward slashes (//). It can be used before and after the statement.
+
+Let’s see the example of single-line comment i.e. added before the statement.
+
+<script>  
+// It is single line comment  
+document.write("hello javascript");  
+</script>  
+Test it Now
+Let’s see the example of single-line comment i.e. added after the statement.
+
+<script>  
+var a=10;  
+var b=20;  
+var c=a+b;//It adds values of a and b variable  
+document.write(c);//prints sum of 10 and 20  
+</script>  
+Test it Now
+JavaScript Multi line Comment
+It can be used to add single as well as multi line comments. So, it is more convenient.
+
+It is represented by forward slash with asterisk then asterisk with forward slash. For example:
+
+/* your code here  */  
+It can be used before, after and middle of the statement.
+
+<script>  
+/* It is multi line comment.  
+It will not be displayed */  
+document.write("example of javascript multiline comment");  
+</script>  
+
+JavaScript Variable
+JavaScript variable
+JavaScript Local variable
+JavaScript Global variable
+A JavaScript variable is simply a name of storage location. There are two types of variables in JavaScript : local variable and global variable.
+
+There are some rules while declaring a JavaScript variable (also known as identifiers).
+
+Name must start with a letter (a to z or A to Z), underscore( _ ), or dollar( $ ) sign.
+After first letter we can use digits (0 to 9), for example value1.
+JavaScript variables are case sensitive, for example x and X are different variables.
+Correct JavaScript variables
+var x = 10;  
+var _value="sonoo";  
+Incorrect JavaScript variables
+var  123=30;  
+var *aa=320;  
+Example of JavaScript variable
+Let’s see a simple example of JavaScript variable.
+
+<script>  
+var x = 10;  
+var y = 20;  
+var z=x+y;  
+document.write(z);  
+</script>  
+Test it Now
+Output of the above example
+30
+JavaScript local variable
+A JavaScript local variable is declared inside block or function. It is accessible within the function or block only. For example:
+
+<script>  
+function abc(){  
+var x=10;//local variable  
+}  
+</script>  
+Or,
+
+<script>  
+If(10<13){  
+var y=20;//JavaScript local variable  
+}  
+</script>  
+JavaScript global variable
+A JavaScript global variable is accessible from any function. A variable i.e. declared outside the function or declared with window object is known as global variable.
+For example:
+
+<script>  
+var data=200;//gloabal variable  
+function a(){  
+document.writeln(data);  
+}  
+function b(){  
+document.writeln(data);  
+}  
+a();//calling JavaScript function  
+b();  
+</script>
