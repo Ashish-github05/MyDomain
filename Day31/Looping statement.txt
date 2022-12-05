@@ -1,0 +1,7 @@
+RESISVING ------------
+
+
+JS If Statement 
+JS Switch
+JS Loop
+JS Function
