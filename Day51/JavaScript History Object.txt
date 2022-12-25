@@ -1,0 +1,89 @@
+JavaScript History Object
+
+The JavaScript history object represents an array of URLs visited by the user. 
+By using this object, you can load previous, forward or any particular page.
+
+The history object is the window property, so it can be accessed by:
+
+window.history  
+Or,
+ 
+Property of JavaScript history object
+There are only 1 property of history object.
+
+No.	Property	Description
+1	length	returns the length of the history URLs.
+
+Methods of JavaScript history object
+There are only 3 methods of history object.
+
+No.	Method	       Description
+1	forward()	loads the next page.
+2	back()	loads the previous page.
+3	go()	loads the given page number.
+Example of history object
+Let’s see the different usage of history object.
+
+history.back();//for previous page  
+history.forward();//for next page  
+history.go(2);//for next 2nd page  
+history.go(-2);//for previous 2nd page  
+
+
+JavaScript Navigator Object-
+
+The JavaScript navigator object is used for browser detection. It can be used to get browser information such as appName, appCodeName, userAgent etc.
+
+The navigator object is the window property, so it can be accessed by:
+
+window.navigator  
+Or,
+
+navigator  
+Property of JavaScript navigator object
+There are many properties of navigator object that returns information of the browser.
+
+No.	Property	Description
+1	appName	        returns the name
+2	appVersion	returns the version
+3	appCodeName	returns the code name
+4	cookieEnabled	returns true if cookie is enabled otherwise false
+5	userAgent	returns the user agent
+6	language	returns the language. It is supported in Netscape and Firefox only.
+7	userLanguage	returns the user language. It is supported in IE only.
+8	plugins	returns the plugins. It is supported in Netscape and Firefox only.
+9	systemLanguage	returns the system language. It is supported in IE only.
+10	mimeTypes[]	returns the array of mime type. It is supported in Netscape and Firefox only.
+11	platform	returns the platform e.g. Win32.
+12	online	returns true if browser is online otherwise false.
+
+Methods of JavaScript navigator object
+The methods of navigator object are given below.
+
+No.	Method	        Description
+1	javaEnabled()	checks if java is enabled.
+2	taintEnabled()	checks if taint is enabled. It is deprecated since JavaScript 1.2.
+Example of navigator object
+Let’s see the different usage of history object.
+
+<script>  
+document.writeln("<br/>navigator.appCodeName: "+navigator.appCodeName);  
+document.writeln("<br/>navigator.appName: "+navigator.appName);  
+document.writeln("<br/>navigator.appVersion: "+navigator.appVersion);  
+document.writeln("<br/>navigator.cookieEnabled: "+navigator.cookieEnabled);  
+document.writeln("<br/>navigator.language: "+navigator.language);  
+document.writeln("<br/>navigator.userAgent: "+navigator.userAgent);  
+document.writeln("<br/>navigator.platform: "+navigator.platform);  
+document.writeln("<br/>navigator.onLine: "+navigator.onLine);  
+</script>  
+Test it Now
+navigator.appCodeName: Mozilla 
+navigator.appName: Netscape 
+navigator.appVersion: 5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 
+(KHTML, like Gecko) Chrome/37.0.2062.124 Safari/537.36 
+navigator.cookieEnabled: true 
+navigator.language: en-US 
+navigator.userAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 
+(KHTML, like Gecko) Chrome/37.0.2062.124 Safari/537.36 
+navigator.platform: Win32 
+navigator.onLine: true
