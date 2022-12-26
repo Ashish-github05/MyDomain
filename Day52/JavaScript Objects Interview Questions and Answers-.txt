@@ -1,0 +1,31 @@
+JavaScript Objects Interview Questions and Answers-
+
+1. What are JavaScript objects?
+JavaScript objects are data structures that contain both properties and methods. A property is a value that is associated with an object, while a method is a function that is associated with an object. Objects can be created using the Object() constructor or the object literal syntax.
+
+2. Can you explain how to create a JavaScript object from scratch?
+To create a JavaScript object from scratch, you will first need to create a constructor function. This function will be used to create new objects, and will take any necessary parameters. Once the constructor function is created, you can then create new objects by using the “new” keyword, followed by the name of the constructor function.
+
+3. How do you check if an object is empty or not in Javascript?
+You can check if an object is empty or not by using the Object.keys() method. This method will return an array of all the keys in the object, which you can then check to see if it is empty or not.
+
+4. Can you explain the difference between class and prototype based inheritance?
+Class based inheritance is the more traditional approach to inheritance, where you have a class that defines the properties and methods that will be inherited by subclasses. Prototype based inheritance is a more modern approach that uses prototypes instead of classes. In this approach, objects can inherit directly from other objects, without the need for a class in between.
+
+5. Is it possible to pass an object as a parameter to a function in JavaScript? If yes, then how?
+Yes, it is possible to pass an object as a parameter to a function in JavaScript. You can do this by passing the object as a parameter to the function, and then using the object’s methods and properties within the function.
+
+6. What are some of the common mistakes that developers make when using objects in JavaScript?
+One common mistake is to assume that all objects are mutable. This can lead to unexpected results, since some objects (such as those created by the Object.create() method) are actually immutable. Another mistake is to try to use an object as a data structure, when in fact it is not designed for that purpose. For example, using an object as a queue (first in, first out) can lead to unexpected results, since the order of properties in an object is not guaranteed.
+
+7. How can we prevent adding properties to an object in JavaScript?
+We can prevent adding properties to an object in JavaScript by using the Object.seal() or Object.preventExtensions() methods. Object.seal() will prevent any new properties from being added to an object, but will not prevent existing properties from being changed. Object.preventExtensions() will prevent any new properties from being added, but will also prevent existing properties from being changed or deleted.
+
+8. Can you give me examples of real-world applications where objects are used extensively?
+Real-world applications where objects are used extensively include web browsers, where the Document Object Model (DOM) is used to represent HTML documents as a tree of objects, and video games, where objects are used to represent characters, items, and other game elements.
+
+9. Can you explain what prototypal inheritance is?
+Prototypal inheritance is a way of creating objects that inherit from other objects. In JavaScript, every object has a “prototype” property that points to another object. When you try to access a property of an object that doesn’t exist, JavaScript will automatically look for that property on the object’s prototype. If it finds it, it will return the value of that property. This allows you to create a “chain” of prototypes, with each object inheriting from the object before it in the chain.
+
+10. How does one go about implementing private variables in Javascript?
+One way to implement private variables in Javascript is to create a closure. A closure is a function that has access to variables in the outer scope, even after the outer function has returned. This means that you can create variables inside of a closure that can only be accessed from within that closure, making them effectively private.
