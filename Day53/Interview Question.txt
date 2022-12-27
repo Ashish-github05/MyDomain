@@ -1,0 +1,31 @@
+JavaScript Objects Interview Questions and Answers-
+
+11. Can you differentiate between constructor functions and classes in JavaScript?
+In JavaScript, constructor functions are used to create objects. Classes are a more recent addition to the language, and provide a more convenient way to create objects and define their properties and methods. Classes can be thought of as syntactic sugar for constructor functions.
+
+12. What’s the best way to implement getter and setters for a JavaScript object?
+The best way to implement getter and setters for a JavaScript object is to use the Object.defineProperty() method. This method allows you to define a new property on an object, or to modify an existing property, and to control how that property can be accessed and set.
+
+13. Why are closures important in JavaScript?
+Closures are important in JavaScript because they allow you to create variables that are only accessible within the scope of a function. This can be useful for creating private variables that can only be accessed by the code inside of a function. Closures can also make it easier to manage your code because you can group related code together in a function.
+
+14. What are pure objects in JavaScript? Give me some examples of such objects.
+A pure object is an object that doesn’t have any inherited properties from a prototype chain. In other words, a pure object is an object that you create yourself without using any built-in objects as a template. Some examples of pure objects in JavaScript would be objects created using the Object.create() method or objects created using the new Object() constructor.
+
+15. What is the significance of the “this” keyword in JavaScript?
+The “this” keyword in JavaScript is used to refer to the current object that is being worked with. This can be useful when you need to access data or methods associated with the current object.
+
+16. Are JavaScript objects mutable?
+Yes, JavaScript objects are mutable. This means that you can change the properties of an object, add new properties to an object, and delete properties from an object.
+
+17. What are constructors in JavaScript?
+A constructor is a function that is used to create an object. It is similar to a class in other programming languages, and it is used to initialize the object.
+
+18. What are the differences between static and dynamic typing in programming languages?
+Static typing means that the type of a variable is known at compile time, while dynamic typing means that the type of a variable is only known at run time. In a statically typed language, you would need to declare the type of a variable when you create it. In a dynamically typed language, the type of a variable is determined when you try to use it.
+
+19. What’s the best way to convert JSON into an object in Javascript?
+The best way to convert JSON into an object in Javascript is to use the JSON.parse() function. This function takes a JSON string and converts it into an object.
+
+20. How can I loop through all keys in an object in Javascript?
+You can use the Object.keys() method to loop through all keys in an object in Javascript. This method will return an array of all the keys in the object, which you can then use a for loop to iterate through.
