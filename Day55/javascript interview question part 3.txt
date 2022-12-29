@@ -1,0 +1,210 @@
+javascript interview question part 3----
+
+
+6. Explain Implicit Type Coercion in javascript.
+Implicit type coercion in javascript is the automatic conversion of value from one data type to another. It takes place when the operands of an expression are of different data types.
+
+String coercion
+String coercion takes place while using the ‘ + ‘ operator. When a number is added to a string, the number type is always converted to the string type.
+
+Example 1:
+
+var x = 3;
+var y = "3";
+x + y // Returns "33" 
+Example 2:
+
+var x = 24;
+var y = "Hello";
+x + y   // Returns "24Hello"; 
+Note - ‘ + ‘ operator when used to add two numbers, outputs a number. The same ‘ + ‘ operator when used to add two strings, outputs the concatenated string:
+var name = "Vivek";
+var surname = " Bisht";
+name + surname     // Returns "Vivek Bisht" 
+Let’s understand both the examples where we have added a number to a string,
+
+When JavaScript sees that the operands of the expression x + y are of different types ( one being a number type and the other being a string type ), it converts the number type to the string type and then performs the operation. Since after conversion, both the variables are of string type, the ‘ + ‘ operator outputs the concatenated string “33” in the first example and “24Hello” in the second example.
+
+Note - Type coercion also takes place when using the ‘ - ‘ operator, but the difference while using ‘ - ‘ operator is that, a string is converted to a number and then subtraction takes place.
+var x = 3;
+Var y = "3";
+x - y    //Returns 0 since the variable y (string type) is converted to a number type
+Boolean Coercion
+Boolean coercion takes place when using logical operators, ternary operators, if statements, and loop checks. To understand boolean coercion in if statements and operators, we need to understand truthy and falsy values.
+
+Truthy values are those which will be converted (coerced) to true. Falsy values are those which will be converted to false.
+
+All values except false, 0, 0n, -0, “”, null, undefined, and NaN are truthy values.
+
+If statements:
+
+Example:
+
+var x = 0;
+var y = 23;
+        
+if(x) { console.log(x) }   // The code inside this block will not run since the value of x is 0(Falsy)  
+        
+if(y) { console.log(y) }    // The code inside this block will run since the value of y is 23 (Truthy)
+Logical operators:
+Logical operators in javascript, unlike operators in other programming languages, do not return true or false. They always return one of the operands.
+
+OR ( | | ) operator - If the first value is truthy, then the first value is returned. Otherwise, always the second value gets returned.
+
+AND ( && ) operator - If both the values are truthy, always the second value is returned. If the first value is falsy then the first value is returned or if the second value is falsy then the second value is returned.
+
+Example:
+
+var x = 220;
+var y = "Hello";
+var z = undefined;
+        
+x | | y    // Returns 220 since the first value is truthy
+        
+x | | z   // Returns 220 since the first value is truthy
+        
+x && y    // Returns "Hello" since both the values are truthy
+        
+y && z   // Returns undefined since the second value is falsy
+        
+if( x && y ){ 
+  console.log("Code runs" ); // This block runs because x && y returns "Hello" (Truthy)
+}   
+        
+if( x || z ){
+  console.log("Code runs");  // This block runs because x || y returns 220(Truthy)
+}
+Equality Coercion
+Equality coercion takes place when using ‘ == ‘ operator. As we have stated before
+
+The ‘ == ‘ operator compares values and not types.
+
+While the above statement is a simple way to explain == operator, it’s not completely true
+
+The reality is that while using the ‘==’ operator, coercion takes place.
+
+The ‘==’ operator, converts both the operands to the same type and then compares them.
+
+Example:
+
+var a = 12;
+var b = "12";
+a == b // Returns true because both 'a' and 'b' are converted to the same type and then compared. Hence the operands are equal.
+Coercion does not take place when using the ‘===’ operator. Both operands are not converted to the same type in the case of ‘===’ operator.
+
+Example:
+
+var a = 226;
+var b = "226";
+
+a === b // Returns false because coercion does not take place and the  operands are of different types. Hence they are not equal. 
+7. Is javascript a statically typed or a dynamically typed language?
+JavaScript is a dynamically typed language. In a dynamically typed language, the type of a variable is checked during run-time in contrast to a statically typed language, where the type of a variable is checked during compile-time.
+
+
+Since javascript is a loosely(dynamically) typed language, variables in JS are not associated with any type. A variable can hold the value of any data type.
+
+For example, a variable that is assigned a number type can be converted to a string type:
+
+var a = 23;
+var a = "Hello World!";
+8. What is NaN property in JavaScript?
+NaN property represents the “Not-a-Number” value. It indicates a value that is not a legal number.
+
+typeof of NaN will return a Number.
+
+To check if a value is NaN, we use the isNaN() function,
+
+Note- isNaN() function converts the given value to a Number type, and then equates to NaN.
+isNaN("Hello")  // Returns true
+isNaN(345)   // Returns false
+isNaN('1')  // Returns false, since '1' is converted to Number type which results in 0 ( a number) 
+isNaN(true) // Returns false, since true converted to Number type results in 1 ( a number)
+isNaN(false) // Returns false
+isNaN(undefined) // Returns true
+9. Explain passed by value and passed by reference.
+In JavaScript, primitive data types are passed by value and non-primitive data types are passed by reference.
+
+For understanding passed by value and passed by reference, we need to understand what happens when we create a variable and assign a value to it,
+
+var x = 2;
+In the above example, we created a variable x and assigned it a value of “2”. In the background, the “=” (assign operator) allocates some space in the memory, stores the value “2” and returns the location of the allocated memory space. Therefore, the variable x in the above code points to the location of the memory space instead of pointing to the value 2 directly.
+
+Assign operator behaves differently when dealing with primitive and non-primitive data types,
+
+Assign operator dealing with primitive types:
+
+
+var y = 234;
+var z = y;
+In the above example, the assign operator knows that the value assigned to y is a primitive type (number type in this case), so when the second line code executes, where the value of y is assigned to z, the assign operator takes the value of y (234) and allocates a new space in the memory and returns the address. Therefore, variable z is not pointing to the location of variable y, instead, it is pointing to a new location in the memory.
+
+var y = #8454; // y pointing to address of the value 234
+
+var z = y; 
+     
+var z = #5411; // z pointing to a completely new address of the value 234
+     
+// Changing the value of y
+y = 23;
+console.log(z);  // Returns 234, since z points to a new address in the memory so changes in y will not effect z
+From the above example, we can see that primitive data types when passed to another variable, are passed by value. Instead of just assigning the same address to another variable, the value is passed and new space of memory is created.
+
+Assign operator dealing with non-primitive types:
+
+
+var obj = { name: "Vivek", surname: "Bisht" };
+var obj2 = obj;
+In the above example, the assign operator directly passes the location of the variable obj to the variable obj2. In other words, the reference of the variable obj is passed to the variable obj2.
+
+var obj = #8711;  // obj pointing to address of { name: "Vivek", surname: "Bisht" }
+var obj2 = obj;
+    
+var obj2 = #8711; // obj2 pointing to the same address 
+
+// changing the value of obj1
+        
+obj1.name = "Akki";
+console.log(obj2);
+        
+// Returns {name:"Akki", surname:"Bisht"} since both the variables are pointing to the same address.
+From the above example, we can see that while passing non-primitive data types, the assign operator directly passes the address (reference).
+
+Therefore, non-primitive data types are always passed by reference.
+
+10. What is an Immediately Invoked Function in JavaScript?
+An Immediately Invoked Function ( known as IIFE and pronounced as IIFY) is a function that runs as soon as it is defined.
+
+Syntax of IIFE :
+
+(function(){ 
+  // Do something;
+})();
+To understand IIFE, we need to understand the two sets of parentheses that are added while creating an IIFE :
+
+The first set of parenthesis:
+
+(function (){
+   //Do something;
+})
+While executing javascript code, whenever the compiler sees the word “function”, it assumes that we are declaring a function in the code. Therefore, if we do not use the first set of parentheses, the compiler throws an error because it thinks we are declaring a function, and by the syntax of declaring a function, a function should always have a name.
+
+function() {
+  //Do something;
+}
+// Compiler gives an error since the syntax of declaring a function is wrong in the code above.
+To remove this error, we add the first set of parenthesis that tells the compiler that the function is not a function declaration, instead, it’s a function expression.
+
+The second set of parenthesis:
+
+(function (){
+  //Do something;
+})();
+From the definition of an IIFE, we know that our code should run as soon as it is defined. A function runs only when it is invoked. If we do not invoke the function, the function declaration is returned:
+
+(function (){
+  // Do something;
+})
+
+// Returns the function declaration
+Therefore to invoke the function, we use the second set of parenthesis.
